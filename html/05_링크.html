@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>링크</title>
+</head>
+<body>
+    
+    <h3># 다른 페이지로 이동하기 위한 링크걸기</h3>
+
+    <p>
+        - a 태그를 이용하기 <br>
+        - 자바스크립트 이용하기 <br>    
+    </p>
+
+    <hr>
+
+    <h3># a (anchor) tag</h3>
+
+    <p>
+        <!--
+            링크 경로 맨 앞의 http://를 생략하면 상대 경로가 된다
+            naver.com은 ./naver.com과 같은 의미를 가지고 있다
+        -->
+        - <a href="https://naver.com" target="_blank">네이버로 가기</a><br>
+        - <a href="https://Google.com">Google</a><br>
+        - a 태그는 전체 글의 일부분에만 링크를 걸 수 있도록 되어있는 태그다
+          (영역을 따로 설정하는 태그가 아니다) <br>
+        - href 속성에는 가고싶은 목적지의 url을 설정해 놓는다 <br>
+        - 절대경로와 상대경로를 모두 사용할 수 있다 
+    </p>
+
+    <hr>
+
+    <p>
+        괌 지난 '마와르' 일본 향한다…<a href="https://naver.com">우리나라</a> 영향은?<br>
+        [앵커]<br>
+        <b>매서운</b> 기세로 괌을 강타한 태풍 <a href="#">'마와르'</a>가 일본 오키나와 쪽으로 북상하고 있습니다.
+        우리나라에 영향을 줄 가능성은 낮은 것으로 보이는데요.
+        다만 주 후반엔 제주에 비가 내릴 수 있겠습니다.
+    </p>
+
+    <hr>
+
+    <h3># JavaScript로 링크 걸기</h3>
+
+    <p>
+        - location: 현재 브라우저 위치 정보들을 담고 있는 인스턴스
+        - href: 현재 브라우저가 보고 있는 페이지의 경로
+    </p>
+
+    <p>
+        자세한 정보는
+        <button onclick="location.href='http://naver.com'">여기</button>에서
+        확인하세요!
+    </p>
+
+</body>
+</html>
