@@ -1,0 +1,79 @@
+#border-style-list {
+    /* border shorthand : 원래는 width, style, color를 각자 설정해야함 */
+    border: salmon 3px solid;
+    list-style-type: none;
+    font-size: 35px;
+}
+
+#border-style-list > li {
+    border: solid black 3px;
+    padding: 5px;
+    margin: 15px;
+}
+
+#border-style-list > li:first-child {
+    border-style: solid;
+}
+
+#border-style-list > li:nth-child(2) {
+    border-style: dotted;
+}
+
+#border-style-list > li:nth-child(3) {
+    border-style: dashed;
+}
+
+#border-style-list > li:nth-child(4) {
+    border-style: double;
+}
+
+#border-style-list > li:nth-child(5) {
+    border-style: inset;
+    border-width: 10px;
+}
+
+#border-style-list > li:nth-child(6) {
+    border-style: outset;
+    border-width: 10px;
+}
+
+#border-style-list > li:nth-child(7) {
+    border-style: groove;
+    border-color: skyblue;
+    border-width: 10px;
+}
+
+#border-style-list > li:nth-child(8) {
+    border-style: ridge;
+    border-color: yellowgreen;
+    border-width: 10px;
+}
+
+#multivalues {
+    list-style-type: none;
+    padding: 5px;
+}
+
+#multivalues > li {
+    border: solid 10px black;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+#multivalues > li:first-child {
+    border-color: crimson;
+}
+
+#multivalues > li:nth-child(2) {
+    border-color: crimson seagreen;
+}
+
+#multivalues > li:nth-child(3) {
+    border-color: tomato seagreen dodgerblue;
+}
+
+#multivalues > li:nth-child(4) {
+    border-style: solid solid double solid;
+    border-color: tomato seagreen dodgerblue darkblue;
+}
