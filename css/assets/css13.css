@@ -1,0 +1,28 @@
+#test-div {
+    font-size: 20px;
+    padding: 5px;
+    border: solid black 3px;
+}
+
+#test-div::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#test-div::first-line {
+    color: red;
+}
+
+#test-div::selection {
+    color: white;
+    background-color: blue;
+}
+
+#test-div::before {
+    content: "요소의 맨 앞입니다~";
+    border: 1px solid black;
+}
+
+#test-div::after {
+    content: "😎";
+}

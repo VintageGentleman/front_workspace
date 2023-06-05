@@ -1,0 +1,135 @@
+#div1 {
+    text-align: justify;
+    border: solid 3px black;
+}
+
+#div1::after{
+    content: "";
+    display: block;
+    clear:right;
+}
+
+#img1 {
+    float: left;
+    margin-right: 15px;
+    width: 200px;
+}
+
+#img2 {
+    float: right;
+    clear: left; /* 다른 float 요소가 왼쪽에 없게 해달라는 뜻 */
+    width: 300px;
+    margin-left: 15px;
+}
+
+#div2 {
+    border: solid 3px black;
+    background-color: beige;
+}
+
+#div2::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+
+#div2> div {
+    box-sizing: border-box;
+    border: solid 3px darkred;
+    background-color: salmon;
+    border-radius: 15px;
+    padding: 30px;
+    color: white;
+    font-size: 25px;
+    float:left;
+}
+
+#div2 > div:first-child {
+    width: 100%;
+}
+
+#div2 > div:nth-child(2) {
+    width: 75%;
+    height: 800px;
+    background-color: white;
+    color: black;
+}
+
+#div2 > div:nth-child(3) {
+    width: 25%;
+    height: 600px;
+}
+
+#div2 > div:nth-child(4) {
+    width: 25%;
+    height: 200px;
+}
+
+/* 세 번째 영역 */
+
+#div3 {
+    border : solid 1px black;
+    width: 800px;
+    margin: auto;
+}
+
+#div3::after {
+    content: "";
+    display: block;
+    clear: left;
+}
+
+#div3 > div {
+    box-sizing: border-box;
+    background-color: rgb(134, 151, 224);
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    float:left;
+    text-align: center;
+}
+
+#div3 > div:first-child {
+    width: 100%;
+    height: 150px;
+    padding-top: 50px;
+    border: 1px black solid;
+    border-style: none none solid none;
+}
+
+#div3 > div:nth-child(even) {
+    width: 20%;
+    height: 500px;
+    background-color: paleturquoise;
+    padding-top: 225px;
+}
+
+#body {
+    width: 60%;
+    height: 500px;
+    border: 1px black solid;
+    border-style: none solid;
+}
+
+#body> div {
+    background-color: gray;
+    height: 70px;
+    padding-top: 30px;
+    border-style: none;
+}
+
+#body > div:nth-child(2) {
+    background-color: white;
+    height: 175px;
+    border: 1px black solid;
+    border-style: solid none;
+    padding-top: 125px;
+}
+
+#div3 > div:nth-child(5) {
+    width: 100%;
+    height: 150px;
+    padding-top: 50px;
+    border: 1px black solid;
+    border-style: solid none none none;
+}
