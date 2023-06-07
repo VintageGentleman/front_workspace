@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16_Flex.html</title>
+    <link rel="stylesheet" href="./assets/css16.css">
+    <script src="https://kit.fontawesome.com/9f7c922525.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <h3># display: flex</h3>
+
+    <ul>
+        <li>내부 요소들의 크기를 자동으로 조절해주는 display 속성</li>
+        <li>display: flex로 설정한 요소는 flex-container가 되고
+            해당 컨테이너 내부의 요소들은 flex-item이 된다</li>
+    </ul>
+
+    <!-- container -->
+    <div id="flex1">
+        <!-- items -->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+
+    <h3># flex-direction: row</h3>
+
+    <div class="flex-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <div id="row2" class="flex-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <div id="row3" class="flex-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    
+    <h3># flex-direction: column</h3>
+    
+    <div class="flex-column">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <hr>
+
+    <div id="column2" class="flex-column">
+        <div>1</div>
+        <div>2</div>
+        <div id="frogicon"><a href="https://flexboxfroggy.com/#ko"><i class="fa-solid fa-frog fa-2xl" style="color: white"></i></a></div>
+    </div>
+
+    <hr>
+
+    <h3># flex-wrap:wrap을 통해 레이아웃을 구성할 수 있다</h3>
+
+    <div id="wrap" class="flex-row">
+        <div>a</div>
+        <div>
+            <div>b-1</div>
+            <div>b-2</div>
+        </div>
+        <div>c</div>
+        <div>d</div>
+    </div>
+
+    <hr>
+
+    <!-- 연습문제 -->
+    <div id="practice">
+        <div>
+            <div class="d1 small">primary</div>
+            <div class="d2">Welcome Gradient</div>
+            <div class="d3 small">
+                <div class="d3-1">abcd</div>
+                <div class="d3-2">abcd</div>
+            </div>
+        </div>
+        <div>
+            <div class="d1 small">primary</div>
+            <div class="d2">Welcome Pine</div>
+            <div class="d3 small">
+                <div class="d3-3">abcd</div>
+            </div>
+        </div>
+        <div>
+            <div class="d1 small">primary</div>
+            <div class="d2">Welcome White</div>
+            <div class="d3 small">
+                <div class="d3-3">abcd</div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div class="d1 ad1 small">primary</div>
+                <div class="d2">Pistachio</div>
+                <div class="d3 small">
+                    <div class="d3-3">abcd</div>
+                </div>
+            </div>
+            <div>
+                <div class="d1 ad1 small">primary</div>
+                <div class="d2">Sea</div>
+                <div class="d3 small">
+                    <div class="d3-3">abcd</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div class="d1 ad1 small">primary</div>
+                <div class="d2">Land</div>
+                <div class="d3 small">
+                    <div class="d3-3">abcd</div>
+                </div>
+            </div>
+            <div>
+                <div class="d1 ad1 small">primary</div>
+                <div class="d2">Grass</div>
+                <div class="d3 small">
+                    <div class="d3-3">abcd</div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div class="d1 ad1 small">primary</div>
+                <div class="d2">Metal</div>
+                <div class="d3 small">
+                    <div class="d3-3">abcd</div>
+                </div>
+                
+            </div>
+            <div>
+                <div class="d1 ad1 small">primary</div>
+                <div class="d2">Steel</div>
+                <div class="d3 small">
+                    <div class="d3-3">abcd</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
