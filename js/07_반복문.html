@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_반복문.html</title>
+    <link rel="stylesheet" href="./assets/css07.css">
+</head>
+<body>
+
+    <h3># 자바스크립트에도 반복문이 있다</h3>
+
+    <ul>
+        <li>for</li>
+        <li>while</li>
+    </ul>
+
+    <!-- 자바스크립트로 구구단을 생성해보세요(단, display: grid를 사용할 것) -->
+    <div id="gugudan"></div>
+
+    <br>
+
+    <h3> 문제풀이 </h3>
+
+    <div id="answer"></div>
+
+    <script>
+        const gugudanDiv = document.getElementById('gugudan');
+        
+        for(dan = 1; dan < 10; ++dan) {
+
+            if(dan === 1) gugudan.innerHTML += '<div></div>';
+            else gugudan.innerHTML += '<div class="dan">' + dan + '단 :' + '</div>';    
+
+            for(gop = 1; gop < 10; ++gop) {
+                if(dan === 1) {
+                    gugudan.innerHTML += '<div class="gop">' + gop + '</div>';    
+                    continue;
+                }
+                
+                gugudan.innerHTML += '<div class="item">' + dan + ' * ' + gop + ' = ' + (dan * gop) + '</div>';
+            }
+        }
+
+        // 문제풀이
+        const answerDiv = document.getElementById('answer');
+
+        answerDiv.style.display = 'grid';
+        answerDiv.style.gridTemplateColumns = 'repeat(8, 1fr)';
+
+        for (gop = 0; gop <= 9; ++gop) {
+            for (dan = 2; dan <= 9; ++dan) {
+                if (gop === 0) {
+                    answerDiv.innerHTML += `<div class="thead">${dan}단</div>`;
+                } else {
+                    // Javascript format string
+                    answerDiv.innerHTML += `<div class="tdata">${dan} x ${gop} = ${dan*gop}</div>`;
+                }
+            }
+        }
+
+        for (i = 0; i < 10; ++i) {
+            console.log(i);
+        }
+
+        i = 0;
+        while (i++ < 10) {
+            console.log('while: ' + i);
+        }
+    </script>
+</body>
+</html>
