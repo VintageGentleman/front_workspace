@@ -59,16 +59,12 @@ console.log('pineapple'.localeCompare('icecream'));
     3. 가장 많이나온 숫자 6개를 HTML에 출력해준다
 */
 
-let num;
 let numArr = [];
-let count = [];
-
 for(i = 0; i < 1000; ++i){
-    num = parseInt(Math.random() * 45 + 1);
-    
-    numArr.push(num);
-}
+    numArr.push(parseInt(Math.random() * 45 + 1));
+};
 
+let count = [];
 for(i = 1; i <= 45; ++i) {
     let cal = 0;
     for(j = 0; j < 1000; ++j){
@@ -76,16 +72,16 @@ for(i = 1; i <= 45; ++i) {
     }
 
     count.push(i + '번 ' + cal);
-}
+};
 
 count.sort(function myComparator(a, b) {
-    let num1 = a.split(' ').pop();
-    let num2 = b.split(' ').pop();
-    
-    console.log(num1);
-    console.log(num2);
-
-    return num2 - num1;
+    return b.split(' ').pop() - a.split(' ').pop();
 });
+
+const displayDiv = document.getElementById('container');
+
+for(i = 0; i < 6; ++i) {
+    displayDiv.innerHTML += '<div class="num">' + count[i].split('번').shift() + '</div>';
+};
 
 console.log(count);
