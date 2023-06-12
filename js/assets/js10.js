@@ -67,7 +67,7 @@ for(i = 0; i < 1000; ++i){
 let count = [];
 for(i = 1; i <= 45; ++i) {
     let cal = 0;
-    for(j = 0; j < 1000; ++j){
+    for(j = 0; j < numArr.length; ++j) {
         if(numArr[j] === i) cal++;
     }
 
@@ -85,3 +85,34 @@ for(i = 0; i < 6; ++i) {
 };
 
 console.log(count);
+
+/* 문제풀이 */
+
+const ranNums = [];
+const numCnts = [];
+
+for(i = 0 ; i < 1000; ++i) {
+    ranNums.push(parseInt(Math.random() * 45 + 1));
+};
+
+// numCnts 배열을 0으로 초기화
+for(i = 0; i < 45; ++i) {
+    numCnts[i] = {
+        cnt: 0,
+        num: i + 1
+    };
+};
+
+for(i = 0; i < 1000; ++i) {
+    numCnts[ranNums[i] - 1].cnt += 1;
+}
+
+numCnts.sort(function(a, b) {
+    return b.cnt - a.cnt;
+});
+
+console.log(numCnts);
+
+for(i = 0; i < 6; ++i) {
+    console.log(`${i + 1}번째로 많이 나온 숫자(${numCnts[i].cnt}회) : ${numCnts[i].num}`);
+}

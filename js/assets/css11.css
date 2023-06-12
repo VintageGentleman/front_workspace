@@ -1,0 +1,44 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'NanumMyeongjoBold', sans-serif;
+}
+
+.column {
+    width: 30vw;    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3vw;
+}
+
+#avgEng {
+    border: black dashed 2px;
+    font-size: 25px;
+    color: chocolate;
+    font-weight: bold;
+}
+
+table {
+    border: 2px black solid;
+    font-size: 20px;
+    border-collapse: collapse;
+}
+
+th {
+    border: 2px black solid;
+}
+
+td {
+    border: 1px black solid;
+}
+
+#header {
+    background-color: red;
+}

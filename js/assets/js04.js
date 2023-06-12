@@ -19,6 +19,10 @@ sysout('\'Hello\'의 타입: ' + typeof value);
 value = "Hello!";
 sysout('"Hello"의 타입: ' + typeof value);
 
+// boolean 타입
+value = true;
+sysout('"true"의 타입' + typeof value);
+
 // Array
 value = [10, 11, 12, 13, 14];
 sysout('[]의 타입: ' + typeof value); // 나오기는 object라고 나온다

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_배열 다루기2.html</title>
+    <link rel="stylesheet" href="./assets/css11.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-myeongjo-eco.css" rel="stylesheet">
+</head>
+<body>
+    <h1>F12</h1>
+    
+    <div id="main">
+
+        <div id="student" class="column">
+            <h2>학생부</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>국어</th>
+                    <th>영어</th>
+                    <th>수학</th>
+                    <th>평균</th>
+                </tr>
+                </thead>
+                <tbody id="stuTable"></tbody>
+            </table>
+        </div>
+    
+        <div id="failed" class="column">
+            <h2>수학 재시험 대상자</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>국어</th>
+                    <th>영어</th>
+                    <th id="header">수학</th>
+                    <th>평균</th>
+                </tr>
+                </thead>
+                <tbody id="mathTable"></tbody>
+            </table>
+        </div>
+    
+        <div class="column">
+            <h2>영어 전체 평균점수</h2>
+            <div id="avgEng"></div>
+        </div>
+
+    </div>
+    
+    <script src="./assets/js11.js"></script>
+</body>
+</html>
