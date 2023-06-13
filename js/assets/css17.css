@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+#out {
+    position: relative;
+    border: solid 3px black;
+    height: 500px;
+}
+
+#out > div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+}

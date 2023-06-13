@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+#out {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px 5px;
+    margin-top: 5px;
+}
+
+#out > div {
+    height: 50px;
+    padding: 10px;
+    color: white;
+    border: crimson 2px solid;
+    font-size: 20px;
+}
+
+.push {
+    background-color: coral;
+}
+
+.unshift {
+    background-color: cornflowerblue;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14_DOM.html</title>
+    <link rel="stylesheet" href="./assets/css14.css">
+</head>
+<body>
+        
+    <div class="sidenav">
+        <a href="#accordion">Accordion</a>
+        <a href="#DOM">DOM</a>
+        <a href="#element">Element</a>
+        <a href="#modify">Modify</a>
+        <a href="#example">Example</a>
+    </div>
+
+    <div class="main">
+
+        <h2 id="accordion">Accordion</h2>
+        
+        <button id="DOM" class="accordion"># Document Object Model (DOM)</button>
+        <div class="panel">
+            <ul>
+                <li>웹 브라우저가 HTML 코드를 해석하여 구조화해놓는 객체</li>
+                <li>document를 통해 HTML의 모든 요소에 접근할 수 있다</li>
+            </ul>
+        </div>
+        
+        <button id="element" class="accordion"># document에서 요소를 선택하는 메서드들</button>
+        <div class="panel">
+            <ul>
+                <li>document.getElementById('id')</li>
+                <li>document.getElementsByClassName('className')</li>
+                <li>document.getElementsByTagName('tagName')</li>
+                <li>document.querySelector('cssSelector')</li>
+                <li>document.querySelectorAll('cssSelector')</li>
+            </ul>
+        </div>
+        
+        <button id="modify" class="accordion"># 선택한 HTML 요소를 변경하는 방법</button>
+        <div class="panel">
+            <ul>
+                <li>element.innerHTML : 해당 요소의 내부의 내용을 채운다 (tag 적용 가능)
+                    태그가 적용되기 때문에 남발하면 보안이 취약해진다</li>
+                <li>element.innerText : 해당 요소의 내부의 내용을 채운다 (tag 미적용)</li>
+                <li>element.속성이름 : 해당 요소의 속성에 접근</li>
+                <li>element.setAttribute() : 메서드로 해당 속성을 변경</li>
+                <li>element.addEventListener() : 메서드로 해당 요소에 이벤트를 추가</li>
+                <li>element.style.propertyName : 해당 요소의 css를 수정</li>
+                <li>element.className : 해당 요소의 클래스 속성에 접근</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- w3schools의 How to 예제 중 하나를 구현하고 분석해보세요 -->
+
+        <h2 id="example">My Customers</h2>
+
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        <table id="myTable">
+            <tr class="header">
+                <th style="width:60%;">Name</th>
+                <th style="width:40%;">Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Berglunds snabbkop</td>
+                <td>Sweden</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Koniglich Essen</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Italy</td>
+            </tr>
+            <tr>
+                <td>North/South</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Paris specialites</td>
+                <td>France</td>
+            </tr>
+        </table>
+        
+    </div>
+
+    <script>
+        function myFunction() {
+
+            var input, filter, table, tr, td, i, txtValue;
+
+            // input, table 요소 가져오기
+            input = document.getElementById("myInput");
+            table = document.getElementById("myTable");
+
+            // 테이블 행 가져오기
+            tr = table.getElementsByTagName("tr");
+
+            // input 요소의 value 속성을 대문자로 바꿔서 변수에 저장하기
+            filter = input.value.toUpperCase();
+
+            for (i = 0; i < tr.length; i++) {
+                // i번째 행의 td 태그 중 첫 번째 요소
+                td = tr[i].getElementsByTagName("td")[0];
+
+                if (td) {
+                    // td의 text 요소. td.textContent가 false라면 txtValue는 td.innerText.
+                    // false = undefined, null, 0. 부정값.
+                    txtValue = td.textContent || td.innerText;
+
+                    // filter 변수에 저장된 값이 td에 포함되어 있다면
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        // table을 보이게함
+                        tr[i].style.display = "";
+                    } else {
+                        // table을 안보이게함
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+
+            acc[i].addEventListener("click", function () {
+
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+
+            });
+        }
+
+    </script>
+        
+</body>
+</html>
