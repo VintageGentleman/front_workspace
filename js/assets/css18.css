@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 1fr;
+    width: 80vw;
+}
+
+#game > div:nth-child(even) {
+    height: 200px;
+}
+
+.player {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.hands {
+    height: 200px;
+}
+
+#buttons {
+    margin-top: 20px;
+}
+
+.gameBtn {
+    width: 100px;
+    font-size: 25px;
+    background-color: aqua;
+    border-color: aqua;
+}
+
+#reset {
+    margin-left: 35px;
+    font-size: 25px;
+    width: 100px;
+    background-color: crimson;
+    border-color: crimson;
+}
+
+#result { 
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-left : 50px;
+    width: 10%;
+}
+
+table {
+    width: 200px;
+    height: 100px;
+    border-collapse: collapse;
+    border-top: solid 1px black;
+}
+
+th {
+    height : 50%;
+    border-bottom: double black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 1.5em;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18_WebStorage.html</title>
+    <link rel="stylesheet" href="./assets/css18.css">
+</head>
+<body>
+    <h3># Web Storage API</h3>
+
+    <ul>
+        <li>웹 브라우저에 데이터를 보관할 수 있는 공간</li>
+        <li>데이터를 Key-Value 형태로 저장할 수 있다</li>
+        <li>로컬 스토리지는 웹 브라우저를 종료하더라도 데이터가 유지된다</li>
+        <li>세션 스토리지는 웹 브라우저를 종료하면 데이터가 삭제된다
+            (session: 서버와 연결이 유지되고 있는 상태, ex: 은행 사이트)</li>
+    </ul>
+
+    <button id="add-btn">데이터 추가하기!</button>
+    <button id="delete-btn">데이터 삭제하기!</button>
+
+    <hr>
+
+    <h3># 전적이 남는 가위바위보 게임 만들기</h3>
+
+    <div id="game">
+        <div class="player">YOU:</div>
+        <div id="you"></div>
+        <div class="player">COM:</div>
+        <div id="com"></div>
+    </div>
+
+    <div id="buttons">
+        <button id="paper" class="gameBtn">보</button>
+        <button id="rock" class="gameBtn">바위</button>
+        <button id="scissors" class="gameBtn">가위</button>
+        <button id="reset">Reset</button> 
+    </div>
+
+    <div id="result"></div>
+
+    <div id="log">
+        <table>
+            <tr>
+                <th>win</th>
+                <th>draw</th>
+                <th>lose</th>
+            </tr>
+            <tr>
+                <td id="win"></td>
+                <td id="draw"></td>
+                <td id="lose"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="./assets/js18.js"></script>
+</body>
+</html>
