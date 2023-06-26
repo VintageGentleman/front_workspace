@@ -1,78 +1,122 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-* > :visited{
-    color: black;
-    text-decoration: none;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-* > :link {
-    color: black;
-    text-decoration: none;
+.nav {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  background-color: white;
+  overflow: hidden;
+  margin-top: 30px;
+  white-space: nowrap;
+}
+.nav a {
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.headfont { 
+  color: #42446E;
+  font-size: 1.5em;
+}
+
+.main {
+  margin: 0 auto;
+  font-size: 30px; 
+  color: #666666;
+  padding: 0px 10px;
+  width: 1000px;
+}
+
+.blank{
+  height: 150px;
+}
+
+.textDiv {
+  margin-bottom: 40px;
 }
 
 #header {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    border: 1px solid black;
-    position: fixed;
-    align-items: center;
-    top: 0;
-    left: 0;
-    padding-right: 15px;
+  display: flex;
+  flex-direction: row;
+}
+#header > div:first-child {
+  width: 50%;
+  padding: 5px;
+}
+#header > div:last-child {
+  width: 50%;
+}
+#header > div:last-child > div {
+  background-image: url("../../resource/image/portfolio/face.png");
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
 }
 
-#header > div {
-    font-size: 14px;
-    text-align: center;
+#stack {
+  text-align: center;
+}
+#skill > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+#skill img {
+  width: 150px;
+  height: 150px;
 }
 
-#header > :first-child {
-    width: 130px;
+#projects { 
+  text-align: center;
 }
-#header > :nth-child(2) {
-    width: 100px;
-}
-#header > :nth-child(3) {
-    width: 100%;
-}
-#header > :nth-child(4) {
-    width: 80px;
-}
-#header > :nth-child(5) {
-    width: 80px;
-}
-#header > :nth-child(6) {
-    width: 60px;
-}
-#header > :nth-child(7) {
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    color: white;
-    background-color: #1a73e8;
+#projects > div:nth-child(2) {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  text-align: left;
+  gap: 30px;
 }
 
-#footer {
-    width: 100%;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding-left: 15px;
+.pj_item {
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
-#footer > div {
-    font-size: 14px;
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
+.pj_item div {
+  border: 1px solid black;
 }
 
+#footer > div:first-child {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 30px;
+  font-size: 0.6em;
+}
+#footer > .blank {
+  height: 60px;
+}
+#footer > .blank > div:first-child{
+  border-bottom: solid 1px gray;
+  height: 30px;
+}
+#footer > .nav {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
