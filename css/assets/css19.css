@@ -197,3 +197,16 @@ body {
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+
+.skill_item {
+  position: relative;
+}
+
+.skill_icon {
+  position: absolute;
+  cursor: pointer;
+}
+
+.skill_icon:hover {
+  top: -5px;
+}
